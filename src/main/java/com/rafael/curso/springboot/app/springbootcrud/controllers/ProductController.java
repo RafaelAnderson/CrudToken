@@ -32,7 +32,7 @@ public class ProductController {
     private ProductService service;
 
     // @Autowired
-    // private ProductValidation valdation;
+    // private ProductValidation validation;
 
     @GetMapping
     public List<Product> list() {

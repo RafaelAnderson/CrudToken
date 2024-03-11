@@ -1,9 +1,10 @@
-package com.rafael.curso.springboot.app.springbootcrud.services;
+package com.rafael.curso.springboot.app.springbootcrud.services.impl;
 
 import java.util.List;
 import java.util.Optional;
 
 import com.rafael.curso.springboot.app.springbootcrud.repositories.ProductRepository;
+import com.rafael.curso.springboot.app.springbootcrud.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
