@@ -8,14 +8,16 @@ import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 
 @Component
-public class IsExistsDbValidation implements ConstraintValidator<IsExistsDb, String>{
+public class IsExistsDbValidation implements ConstraintValidator<IsExistsDb, String> {
 
     @Autowired
-    private ProductService service;
+    private ProductService productService;
 
     @Override
     public boolean isValid(String value, ConstraintValidatorContext context) {
-        return !service.existsBySku(value);
+        if (productService == null) {
+            return true;
+        }
+        return !productService.existsBySku(value);
     }
-    
 }
